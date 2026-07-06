@@ -1,0 +1,28 @@
+# Pages to watch in the cloud (GitHub Actions) mode.
+#
+# Add as many entries as you like. After editing, commit & push — the scheduled
+# job picks up the change on its next run. This file replaces the web UI's
+# "add item" form when running headless in CI.
+#
+# Fields:
+#   name                : a unique label (also used as the state key)
+#   url                 : the page to watch
+#   mode                : "keyword" (default) or "diff"
+#   available_phrases   : optional overrides; leave [] to use sensible defaults
+#   unavailable_phrases : optional overrides; leave [] to use sensible defaults
+#   active              : true/false
+
+- name: HYROX Nashville
+  url: https://hyrox.com/event/hyrox-nashville/
+  mode: keyword
+  available_phrases: []       # e.g. ["Register Now", "Buy Tickets", "Sign Up"]
+  unavailable_phrases: []     # e.g. ["Sold Out", "Coming Soon", "Notify Me"]
+  active: true
+
+# --- add more like this ---
+# - name: Some Other Event
+#   url: https://example.com/tickets
+#   mode: keyword
+#   available_phrases: []
+#   unavailable_phrases: []
+#   active: true

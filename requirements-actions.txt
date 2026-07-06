@@ -1,0 +1,8 @@
+# Slim dependency set for the headless cloud runner (run_checks.py).
+# No Flask / APScheduler / Twilio needed in CI.
+requests>=2.31
+beautifulsoup4>=4.12
+PyYAML>=6.0
+python-dotenv>=1.0
+# For JavaScript-rendered pages (installed + cached in the workflow).
+playwright>=1.44
